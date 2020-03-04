@@ -1,4 +1,4 @@
-# projetvuejs
+# rendu-vu
 
 ## Project setup
 ```

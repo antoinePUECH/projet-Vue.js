@@ -1,16 +1,20 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+import Home from '../pages/Home'
+import Film from '../components/Film'
+import Details from '../pages/Details'
+import Favoris from '../pages/Favoris'
 
-import HomePage from './../views/HomePage.vue'
-import DetailsPage from './../views/DetailsPage.vue'
-import films from './../components/films.vue'
 Vue.use(VueRouter)
 
+const routes = [
+    { path: '/Film', component: Film },
+    { path: '/', component: Home },
+    { path: '/Details/:id', component: Details },
+    { path: '/Favoris', component: Favoris}
+]
+
 export default new VueRouter({
-    routes: [
-        { path: '/film', component: HomePage},
-        { path: '/film/:id', component: films},
-        { path: '/Details', component: DetailsPage},
-    ]
+    routes 
 })
